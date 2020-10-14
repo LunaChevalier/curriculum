@@ -6,6 +6,7 @@
 | ------- | ----------------------------------------------------- |
 | twitter | [@Luna_Chevalier](https://twitter.com/luna_chevalier) |
 | qiita   | [@LunaChevalier](https://qiita.com/LunaChevalier)     |
+| zenn    | [@luna_chevalier](https://zenn.dev/luna_chevalier)     |
 
 ## スキル
 
