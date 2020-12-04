@@ -249,12 +249,4 @@ VSCodeの拡張機能になります
 [Zenn](https://zenn.dev/)というサービスのローカルに関する機能をVSCode用に使いやすくしたものです  
 詳細に付いては、[こちらの記事](https://zenn.dev/luna_chevalier/articles/32000c3e8043de8801a0)にまとめました
 
-#### 実装した機能
-
-* コマンドパレットから以下の実行
-  * article、bookの新規作成
-  * bookにチャプターを追加
-* articleの`emoji`と`title`で、エクスプローラに表示
-* bookの`title`で、エクスプローラに表示
-  * 各bookの子要素として、チャプターもエクスプローラに表示
-* エクスプローラから、各種mdファイルを開き、編集する
+[marketplace](https://marketplace.visualstudio.com/items?itemName=LunaChevalier.vs-zenn)
