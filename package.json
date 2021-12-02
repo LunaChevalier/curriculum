@@ -1,0 +1,12 @@
+{
+  "name": "curriculum",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/LunaChevalier/curriculum.git",
+  "author": "LunaChevalier <luna.chevalier.817.sk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "md-to-pdf": "^5.0.1"
+  },
+  "type": "module"
+}
