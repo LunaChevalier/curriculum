@@ -1,0 +1,37 @@
+name: pdf-generator
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  nodejob:
+    runs-on: ubuntu-latest
+    env:
+      REPO: https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
+      EMAIL: ${{secrets.EMAIL}}
+    steps:
+      - name: install japanese
+        run: sudo apt-get update && sudo apt-get install locales fonts-noto -y
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.10.0"
+
+      - name: npm install
+        run: npm install
+
+      - name: Generate PDF
+        run: "npx md-to-pdf --stylesheet ./pdf.css --pdf-options '{ \"format\": \"A4\", \"margin\": \"20mm\" }' README.md"
+
+      - name: Git commit and push
+        run: |
+          git config --global user.email ${EMAIL}
+          git config --global user.name "LunaChevalier"
+          git add .
+          git status
+          git commit -m 'generate PDF' && git push ${REPO} ${{github.event.pull_request.head.ref}}
