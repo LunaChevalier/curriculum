@@ -6,7 +6,7 @@
   "author": "LunaChevalier <luna.chevalier.817.sk@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "md-to-pdf": "^5.1.0"
+    "md-to-pdf": "^5.2.4"
   },
   "type": "module"
 }
