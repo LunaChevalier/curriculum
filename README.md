@@ -61,6 +61,8 @@
 * Flutter
 * GCP
 * Dagger2
+* Jetpack Compose
+* マルチモジュール
 * AWS(個人開発)
 * rspec(個人開発)
 
