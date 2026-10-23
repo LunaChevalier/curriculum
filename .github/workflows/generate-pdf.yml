@@ -14,23 +14,23 @@ jobs:
       - name: install japanese
         run: sudo apt-get update && sudo apt-get install locales fonts-noto -y
 
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
       - name: Install dependencies
         run: |
           sudo apt-get update
           wget https://github.com/jgm/pandoc/releases/download/3.5/pandoc-3.5-1-amd64.deb
           sudo apt install ./pandoc-3.5-1-amd64.deb
           sudo apt-get install -y texlive-xetex texlive-lang-japanese texlive-luatex
-          sudo apt-get install -y npm curl
+          sudo apt-get install -y curl
           npm install -g @mermaid-js/mermaid-cli
           curl -o diagram.lua https://raw.githubusercontent.com/pandoc-ext/diagram/refs/heads/main/_extensions/diagram/diagram.lua
-
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: "16.10.0"
 
       - name: npm install
         run: npm install
